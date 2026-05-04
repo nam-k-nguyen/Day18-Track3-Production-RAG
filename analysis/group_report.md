@@ -1,8 +1,8 @@
 # Group Report — Lab 18: Production RAG
 
-**Nhóm:** C401-C5
-**Ngày:** 2026-05-04
-
+**Nhóm:** C5-401 
+**Ngày:** 5/4/2026
+Phần commmit của từng thành viên nằm trong các nhánh mX tương ứng.
 ## Thành viên & Phân công
 
 | Tên | Module | Hoàn thành | Tests pass |
