@@ -2,7 +2,7 @@
 
 **Nhóm:** C5-401 
 **Ngày:** 5/4/2026
-
+Phần commmit của từng thành viên nằm trong các nhánh mX tương ứng.
 ## Thành viên & Phân công
 
 | Tên | Module | Hoàn thành | Tests pass |
