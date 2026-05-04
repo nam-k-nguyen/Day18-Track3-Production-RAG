@@ -11,7 +11,7 @@ Lab gồm **2 phần**:
 
 | Phần | Hình thức | Thời gian | Mô tả |
 |------|-----------|-----------|-------|
-| **Phần A** | Cá nhân | 1.5 giờ | Implement 1 trong 4 modules |
+| **Phần A** | Cá nhân | 1.5 giờ | Implement 1 trong 5 modules |
 | **Phần B** | Nhóm (3–4 người) | 30 phút | Ghép modules → full pipeline → eval → present |
 
 ```
@@ -23,7 +23,9 @@ Lab gồm **2 phần**:
   ├────────────┤  │    │  pipeline.py + RAGAS eval     │
   │ M3 Rerank  │──┤    │  + failure analysis           │
   ├────────────┤  │    └──────────────────────────────┘
-  │ M4 Eval    │──┘
+  │ M4 Eval    │──┤
+  ├────────────┤  │
+  │ M5 Enrich  │──┘
   └────────────┘
 ```
 
@@ -72,13 +74,15 @@ lab18-production-rag/
 │   ├── m2_search.py            # Module 2: Hybrid Search
 │   ├── m3_rerank.py            # Module 3: Reranking
 │   ├── m4_eval.py              # Module 4: Evaluation
+│   ├── m5_enrichment.py        # Module 5: Enrichment Pipeline (Bonus)
 │   └── pipeline.py             # Ghép nhóm
 │
 ├── tests/                      # Auto-grading
 │   ├── test_m1.py
 │   ├── test_m2.py
 │   ├── test_m3.py
-│   └── test_m4.py
+│   ├── test_m4.py
+│   └── test_m5.py
 │
 ├── analysis/                   # ★ Deliverable
 │   ├── failure_analysis.md     # Phân tích failures (nhóm)
