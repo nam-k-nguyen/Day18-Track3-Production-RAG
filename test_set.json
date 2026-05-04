@@ -1,3 +1,82 @@
 [
-  {"question": "hihi cả nhà tự tạo testset bằng cơm nhé", "ground_truth": "Không kịp tạo luôn"},
+  {
+    "id": "q1",
+    "question": "Nghị định 13/2023 quy định về vấn đề gì?",
+    "ground_truth": "Nghị định 13/2023 quy định về bảo vệ dữ liệu cá nhân.",
+    "type": "legal_overview",
+    "difficulty": "easy",
+    "source": "nd13_2023"
+  },
+  {
+    "id": "q2",
+    "question": "Theo nghị định 13, dữ liệu cá nhân là gì?",
+    "ground_truth": "Dữ liệu cá nhân là thông tin dưới dạng ký hiệu, chữ viết, số, hình ảnh, âm thanh hoặc dạng tương tự gắn với một con người cụ thể.",
+    "type": "definition",
+    "difficulty": "easy",
+    "source": "nd13_2023"
+  },
+  {
+    "id": "q3",
+    "question": "Các hành vi bị cấm liên quan đến dữ liệu cá nhân là gì?",
+    "ground_truth": "Các hành vi bị cấm bao gồm xử lý dữ liệu trái phép, tiết lộ dữ liệu mà không có sự đồng ý, và sử dụng sai mục đích.",
+    "type": "legal_rule",
+    "difficulty": "medium",
+    "source": "nd13_2023"
+  },
+  {
+    "id": "q4",
+    "question": "Quyền của chủ thể dữ liệu bao gồm những gì?",
+    "ground_truth": "Quyền bao gồm quyền biết, quyền đồng ý, quyền truy cập, chỉnh sửa và yêu cầu xóa dữ liệu.",
+    "type": "legal_rights",
+    "difficulty": "medium",
+    "source": "nd13_2023"
+  },
+  {
+    "id": "q5",
+    "question": "Thuế GTGT đầu ra là gì?",
+    "ground_truth": "Thuế GTGT đầu ra là số thuế tính trên doanh thu bán hàng hóa, dịch vụ.",
+    "type": "tax_definition",
+    "difficulty": "easy",
+    "source": "vat_form"
+  },
+  {
+    "id": "q6",
+    "question": "Thuế GTGT phải nộp được tính như thế nào?",
+    "ground_truth": "Thuế GTGT phải nộp bằng thuế GTGT đầu ra trừ thuế GTGT đầu vào được khấu trừ.",
+    "type": "tax_formula",
+    "difficulty": "easy",
+    "source": "vat_form"
+  },
+  {
+    "id": "q7",
+    "question": "Nếu thuế đầu vào lớn hơn thuế đầu ra thì xử lý thế nào?",
+    "ground_truth": "Nếu thuế đầu vào lớn hơn thuế đầu ra thì doanh nghiệp được khấu trừ hoặc hoàn thuế theo quy định.",
+    "type": "tax_logic",
+    "difficulty": "medium",
+    "source": "vat_form"
+  },
+  {
+    "id": "q8",
+    "question": "Doanh thu chịu thuế GTGT được xác định như thế nào?",
+    "ground_truth": "Doanh thu chịu thuế GTGT là tổng giá trị hàng hóa, dịch vụ bán ra chưa bao gồm thuế GTGT.",
+    "type": "tax_definition",
+    "difficulty": "medium",
+    "source": "vat_form"
+  },
+  {
+    "id": "q9",
+    "question": "Nghị định 13 có yêu cầu gì về sự đồng ý của người dùng?",
+    "ground_truth": "Việc xử lý dữ liệu cá nhân phải có sự đồng ý rõ ràng của chủ thể dữ liệu.",
+    "type": "legal_requirement",
+    "difficulty": "medium",
+    "source": "nd13_2023"
+  },
+  {
+    "id": "q10",
+    "question": "Các loại dữ liệu cá nhân nhạy cảm là gì?",
+    "ground_truth": "Dữ liệu nhạy cảm bao gồm thông tin sức khỏe, tài chính, vị trí, và các thông tin riêng tư khác.",
+    "type": "legal_detail",
+    "difficulty": "hard",
+    "source": "nd13_2023"
+  }
 ]
