@@ -1,6 +1,6 @@
 # Individual Reflection — Lab 18
 
-**Tên:** [LÊ TÚ NAM]  
+**Tên:** [LÊ TÚ NAM]- 2A202600109  
 **Module phụ trách:** [M1]
 
 ---
@@ -9,9 +9,7 @@
 
 - Module đã implement:Chunking strategies cho Ingestion Pipeline trong RAG (Retrieval-Augmented Generation).
 - Các hàm/class chính đã viết:  Chunk dataclass; chunk_basic (fixed-size); chunk_semantic (dùng SentenceTransformer cosine sim < 0.75); chunk_hierarchical (parent 2000/child 500 tokens, cha-con); chunk_structure_aware (theo header Markdown); load_documents (PDF/TXT/MD từ ./data/); compare_strategies (stats số chunk, độ dài).
-
-Số tests pass: 10/10 (giả sử full pass sau debug regex và PDF loader).
-- Số tests pass: /
+- Số tests pass: 13/13
 
 ## 2. Kiến thức học được
 
@@ -27,9 +25,8 @@ Số tests pass: 10/10 (giả sử full pass sau debug regex và PDF loader).
 
 ## 4. Nếu làm lại
 
-Sẽ làm khác điều gì: Thêm overlap 20% cho basic chunk (như slide fixed 512 overlap 64 page-4); integrate enrichment (HyQA, metadata extract) trước embed.
-
-Module nào muốn thử tiếp: Retrieval (Hybrid BM25 + Dense, reranking bge-reranker-v2-m3) vì "Highest ROI" slide page-10.
+Sẽ làm khác điều gì: Thêm overlap 20% cho basic chunk.
+Module nào muốn thử tiếp: Retrieval (Hybrid BM25 + Dense, reranking bge-reranker-v2-m3) vì LÀ "Highest ROI"
 
 ## 5. Tự đánh giá
 
