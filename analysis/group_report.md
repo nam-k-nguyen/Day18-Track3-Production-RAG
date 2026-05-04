@@ -9,9 +9,9 @@ Phần commmit của từng thành viên nằm trong các nhánh mX tương ứn
 |-----|--------|-----------|-----------|
 |LÊ TÚ NAM | M1: Chunking | ☑ | 8/8 |
 | Lê Hữu Hưng | M2: Hybrid Search | ☑ | 5/5 |
-| [Tên 3] | M3: Reranking | ☑ | 5/5 |
-| [Tên 4] | M4: Evaluation | ☑ | 4/4 |
-| [Tên 5] | M5: Enrichment | ☑ | 10/10 |
+| Đỗ Minh Phúc | M3: Reranking | ☑ | 5/5 |
+| Lại Đức Anh | M4: Evaluation | ☑ | 4/4 |
+| Nguyễn Khánh Nam | M5: Enrichment | ☑ | 10/10 |
 
 ## Kết quả RAGAS
 
