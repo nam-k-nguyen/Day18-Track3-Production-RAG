@@ -1,13 +1,13 @@
 # Group Report — Lab 18: Production RAG
 
-**Nhóm:** [Tên]  
-**Ngày:**
+**Nhóm:** C5-401 
+**Ngày:** 5/4/2026
 
 ## Thành viên & Phân công
 
 | Tên | Module | Hoàn thành | Tests pass |
 |-----|--------|-----------|-----------|
-| | M1: Chunking | ☐ | /8 |
+|LÊ TÚ NAM-2A202600109 | M1: Chunking | ☐ | /8 |
 | | M2: Hybrid Search | ☐ | /5 |
 | | M3: Reranking | ☐ | /5 |
 | | M4: Evaluation | ☐ | /4 |
