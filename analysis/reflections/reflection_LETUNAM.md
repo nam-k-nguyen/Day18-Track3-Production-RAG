@@ -9,17 +9,22 @@
 
 - Module đã implement:Chunking strategies cho Ingestion Pipeline trong RAG (Retrieval-Augmented Generation).
 - Các hàm/class chính đã viết:  Chunk dataclass; chunk_basic (fixed-size); chunk_semantic (dùng SentenceTransformer cosine sim < 0.75); chunk_hierarchical (parent 2000/child 500 tokens, cha-con); chunk_structure_aware (theo header Markdown); load_documents (PDF/TXT/MD từ ./data/); compare_strategies (stats số chunk, độ dài).
+- OCR pipeline (_ocr_single_page, _read_pdf_ocr) và _read_pdf với 3 chế độ (use_ocr / ocr_fallback / pypdf-only) — đây là addition lớn trong code
+- get_ocr_client() (lazy init OpenAI client qua OpenRouter)
+-  _pil_to_base64() helper
+-  load_documents có thêm params use_ocr, ocr_fallback, verbose
+-  Config imports mở rộng thêm: OPENROUTER_API_KEY, OCR_MODEL, OCR_MIN_TEXT_LENGTH
 - Số tests pass: 13/13
 
 ## 2. Kiến thức học được
 
-- Khái niệm mới nhất: Hierarchical chunking - chia parent lớn cho context, child nhỏ cho retrieval chính xác, khớp slide page-4 "retrieve child, return parent".
+- Khái niệm mới nhất: Hierarchical chunking - chia parent lớn cho context, child nhỏ cho retrieval chính xác, khớp slide page-4 "retrieve child, return parent",  OCR fallback mechanism.
 - Điều bất ngờ nhất: Semantic chunking dùng embedding để nhóm câu tương đồng tự động, nhanh hơn expected với model cache all-MiniLM-L6-v2.
 - Kết nối với bài giảng (slide nào):  Trực tiếp implement 3 chunking strategies (Fixed, Semantic, Hierarchical) từ slide page-4, fix "Chunking Mismatch" offline failure slide page-1/3.
 
 ## 3. Khó khăn & Cách giải quyết
 
-- Khó khăn lớn nhất:  Regex split câu/đoạn trong chunk_semantic và chunk_structure_aware fail với text PDF noisy (nhiều và lộn xộn)
+- Khó khăn lớn nhất:  Regex split câu/đoạn trong chunk_semantic và chunk_structure_aware fail với text PDF noisy (nhiều và lộn xộn),  OCR latency là một khó khăn thực tế trong implement.
 - Cách giải quyết: Cách giải quyết: Thêm re.split(r'(?<=[.!?])\s+|\n\n'), lookbehind cho sentence; test với sample PDF
 - Thời gian debug:  2 giờ (1h regex, 1h hierarchical parent_id logic).
 
