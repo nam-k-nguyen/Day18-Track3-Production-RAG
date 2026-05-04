@@ -7,7 +7,7 @@ Phần commmit của từng thành viên nằm trong các nhánh mX tương ứn
 
 | Tên | Module | Hoàn thành | Tests pass |
 |-----|--------|-----------|-----------|
-| [Tên 1] | M1: Chunking | ☑ | 8/8 |
+|LÊ TÚ NAM | M1: Chunking | ☑ | 8/8 |
 | Lê Hữu Hưng | M2: Hybrid Search | ☑ | 5/5 |
 | [Tên 3] | M3: Reranking | ☑ | 5/5 |
 | [Tên 4] | M4: Evaluation | ☑ | 4/4 |
