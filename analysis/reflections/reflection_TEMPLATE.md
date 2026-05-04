@@ -1,7 +1,7 @@
 # Individual Reflection — Lab 18
 
-**Tên:** [Họ tên]  
-**Module phụ trách:** [M1/M2/M3/M4]
+**Tên:** [LÊ TÚ NAM]  
+**Module phụ trách:** [M1]
 
 ---
 
