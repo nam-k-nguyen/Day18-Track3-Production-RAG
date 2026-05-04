@@ -36,6 +36,6 @@ Module nào muốn thử tiếp: Retrieval (Hybrid BM25 + Dense, reranking bge-r
 | Tiêu chí | Tự chấm (1-5) |
 |----------|---------------|
 | Hiểu bài giảng | 3|
-| Code quality | |3
+| Code quality | 3|
 | Teamwork | 3|
 | Problem solving | 3|
