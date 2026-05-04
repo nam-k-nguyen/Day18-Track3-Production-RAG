@@ -1,6 +1,8 @@
 import re
-import numpy as np
 from dataclasses import dataclass, field
+from pathlib import Path
+
+import numpy as np
 from sentence_transformers import SentenceTransformer
 
 # ─── CONFIG SAFE IMPORT ─────────────────────────────────
@@ -10,11 +12,13 @@ try:
         SEMANTIC_THRESHOLD,
         HIERARCHICAL_PARENT_SIZE,
         HIERARCHICAL_CHILD_SIZE,
+        EMBEDDING_MODEL,
     )
 except ImportError:
     SEMANTIC_THRESHOLD = 0.75
     HIERARCHICAL_PARENT_SIZE = 2000
     HIERARCHICAL_CHILD_SIZE = 500
+    EMBEDDING_MODEL = "BAAI/bge-m3"
 
 
 # ─── CORE DATA STRUCTURE ────────────────────────────────
@@ -55,7 +59,7 @@ _MODEL = None
 def get_model():
     global _MODEL
     if _MODEL is None:
-        _MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+        _MODEL = SentenceTransformer(EMBEDDING_MODEL)
     return _MODEL
 
 
@@ -196,12 +200,6 @@ def _compute_stats(chunks: list[Chunk]):
     }
 
 # ─── DOCUMENT LOADER ────────────────────────────────────
-
-# ─── DOCUMENT LOADER ────────────────────────────────────
-
-# ─── DOCUMENT LOADER ────────────────────────────────────
-
-from pathlib import Path
 
 
 def _read_pdf(path: str) -> str:

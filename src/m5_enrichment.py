@@ -6,8 +6,11 @@ Làm giàu chunks TRƯỚC khi embed: Summarize, HyQA, Contextual Prepend, Auto 
 Test: pytest tests/test_m5.py
 """
 
-import os, re, sys, json
-from dataclasses import dataclass, field
+import json
+import os
+import re
+import sys
+from dataclasses import dataclass
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import OPENAI_API_KEY
@@ -119,7 +122,6 @@ def generate_hypothesis_questions(text: str, n_questions: int = 3) -> list[str]:
         questions = [re.sub(r"^[\d\.\-\)\s]+", "", q).strip() for q in questions]
         return questions
 
-    numbers = re.findall(r"\d+", text)
     topics = []
     keywords = [
         (r"nghỉ phép", "Nhân viên được nghỉ phép bao nhiêu ngày?"),
@@ -138,7 +140,7 @@ def generate_hypothesis_questions(text: str, n_questions: int = 3) -> list[str]:
         return topics[:n_questions]
 
     if text.strip():
-        return [f"Đoạn văn này nói về điều gì?"]
+        return ["Đoạn văn này nói về điều gì?"]
     return []
 
 
