@@ -136,7 +136,8 @@ def failure_analysis(eval_results: list[EvalResult], bottom_n: int = 10) -> list
 def save_report(results: dict, failures: list[dict], path: str = "reports/ragas_report.json"):
     """Save evaluation report to JSON."""
     import os
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+    if os.path.dirname(path):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
     report = {
         "aggregate": {k: v for k, v in results.items() if k != "per_question"},
         "num_questions": len(results.get("per_question", [])),
