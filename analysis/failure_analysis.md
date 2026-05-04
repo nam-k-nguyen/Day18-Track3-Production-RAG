@@ -1,7 +1,7 @@
 # Failure Analysis — Lab 18: Production RAG
 
 **Nhóm:** C401-C5  
-**Thành viên:** [Tên 1 → M1] · [Lê Hữu Hưng → M2] · [Tên 3 → M3] · [Tên 4 → M4] · [Tên 5 → M5]
+**Thành viên:** [Lê Tú Nam → M1] · [Lê Hữu Hưng → M2] · [Đỗ Minh Phúc → M3] · [Lại Đức Anh → M4] · [Nguyễn Khánh Nam → M5]
 
 ---
 
