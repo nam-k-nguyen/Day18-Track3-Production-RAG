@@ -30,7 +30,7 @@ def build_pipeline():
 
     # Step 2: Enrichment (M5)
     print("\n[2/4] Enriching chunks (M5)...")
-    enriched = enrich_chunks(all_chunks, methods=["contextual", "hyqa", "metadata"])
+    enriched = enrich_chunks(all_chunks, methods=["contextual"])
     if enriched:
         # Use enriched text for indexing
         all_chunks = [{"text": e.enriched_text, "metadata": e.auto_metadata} for e in enriched]
@@ -57,16 +57,14 @@ def run_query(query: str, search: HybridSearch, reranker: CrossEncoderReranker) 
     reranked = reranker.rerank(query, docs, top_k=RERANK_TOP_K)
     contexts = [r.text for r in reranked] if reranked else [r.text for r in results[:3]]
 
-    # TODO (nhóm): Replace with LLM generation for better scores
-    # from openai import OpenAI
-    # client = OpenAI()
-    # context_str = "\n\n".join(contexts)
-    # resp = client.chat.completions.create(model="gpt-4o-mini", messages=[
-    #     {"role": "system", "content": "Trả lời CHỈ dựa trên context. Nếu không có → nói 'Không tìm thấy.'"},
-    #     {"role": "user", "content": f"Context:\n{context_str}\n\nCâu hỏi: {query}"},
-    # ])
-    # answer = resp.choices[0].message.content
-    answer = contexts[0] if contexts else "Không tìm thấy thông tin."
+    from openai import OpenAI
+    client = OpenAI()
+    context_str = "\n\n".join(contexts)
+    resp = client.chat.completions.create(model="gpt-4o-mini", messages=[
+        {"role": "system", "content": "Trả lời CHỈ dựa trên context. Nếu không có → nói 'Không tìm thấy.'"},
+        {"role": "user", "content": f"Context:\n{context_str}\n\nCâu hỏi: {query}"},
+    ])
+    answer = resp.choices[0].message.content
     return answer, contexts
 
 
